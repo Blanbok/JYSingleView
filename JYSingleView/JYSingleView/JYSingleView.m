@@ -6,6 +6,55 @@
 //  Copyright © 2017年 juyuanGroup. All rights reserved.
 //
 #import "JYSingleView.h"
+@implementation JYSingleModel
+- (instancetype _Nonnull)init
+{
+    if (self = [super init]) {
+        self->_title = @"标题";
+        self->_text = @"详情";
+        
+        self->_textColor_title  = [UIColor blackColor];
+        self->_font_title       = [UIFont systemFontOfSize:14];
+        self->_inset_title      = UIEdgeInsetsMake(0, 15, 0, 0);
+        
+        self->_textColor_text   = [UIColor blackColor];
+        self->_font_text        = [UIFont systemFontOfSize:14];
+        self->_inset_text       = UIEdgeInsetsMake(0, 0, 0, 15);
+        
+    }
+    return self;
+}
+
+- (instancetype)initWithModel:(JYSingleModel*)model
+{
+    if (self = [super init]) {
+        ///The number of storage properties
+        unsigned int propertyCount = 0;
+        ///The properties of the current class are obtained by running
+        objc_property_t *propertys = class_copyPropertyList([self class], &propertyCount);
+        
+        //Put the properties in the array
+        for (int i = 0; i < propertyCount; i ++) {
+            ///Take the first property
+            objc_property_t property = propertys[i];
+            
+            const char * propertyName = property_getName(property);
+            NSString *name = [NSString stringWithUTF8String:propertyName];
+            [self setValue:[model valueForKey:name] forKey:name];
+            
+        }
+        free(propertys);
+    }
+    return self;
+}
+
+- (void)JY_clickSingleViewTap:(UITapGestureRecognizer *)tap
+{
+    
+}
+
+@end
+
 @interface JYSingleView ()
 
 @property (nonnull,nonatomic,strong) UILabel *label_title;
