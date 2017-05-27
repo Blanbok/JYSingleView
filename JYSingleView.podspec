@@ -25,7 +25,7 @@ Pod::Spec.new do |s|
 
   s.source       = { :git => "https://github.com/Blanbok/JYSingleView.git", :tag => "#{s.version}" }
 
-  s.source_files  = "JYSingleView", "JYSingleView/jySingleView/JYSingleView.{h,m}"
+  s.source_files  = "TheJYSingleView", "TheJYSingleView/JYSingleView.{h,m}"
   s.ios.deployment_target = "8.0"
 
   s.dependency "Masonry"
