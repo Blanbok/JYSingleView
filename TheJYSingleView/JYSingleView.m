@@ -81,7 +81,7 @@
 - (instancetype)initWithFrame:(CGRect)frame
 {
     if (self = [super initWithFrame:frame]) {
-        self->_model = [[JYSingleModel alloc]initWithModel:self.defaultModel];
+        self->_model = self.defaultModel;
         [self commInit];
     }
     return self;
@@ -90,7 +90,7 @@
 - (instancetype)initWithCoder:(NSCoder *)aDecoder
 {
     if (self = [super initWithCoder:aDecoder]) {
-        self->_model = [[JYSingleModel alloc]initWithModel:self.defaultModel];
+        self->_model = self.defaultModel;
         
         [self commInit];
     }
