@@ -13,7 +13,7 @@
 		84097A331ED7F03A00042B7E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84097A311ED7F03A00042B7E /* Main.storyboard */; };
 		84097A351ED7F03A00042B7E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84097A341ED7F03A00042B7E /* Assets.xcassets */; };
 		84097A381ED7F03A00042B7E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84097A361ED7F03A00042B7E /* LaunchScreen.storyboard */; };
-		84097A421ED7F08E00042B7E /* JYSingleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84097A411ED7F08E00042B7E /* JYSingleView.m */; };
+		848E5B9C1ED902C1000518E0 /* JYSingleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 848E5B9B1ED902C1000518E0 /* JYSingleView.m */; };
 		B84D6B6635E0E51FB389CE6D /* Pods_JYSingleView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30905C01D6244AFE44F539CA /* Pods_JYSingleView.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,8 +29,8 @@
 		84097A341ED7F03A00042B7E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84097A371ED7F03A00042B7E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84097A391ED7F03A00042B7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		84097A401ED7F08E00042B7E /* JYSingleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYSingleView.h; sourceTree = "<group>"; };
-		84097A411ED7F08E00042B7E /* JYSingleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYSingleView.m; sourceTree = "<group>"; };
+		848E5B9A1ED902C1000518E0 /* JYSingleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYSingleView.h; sourceTree = "<group>"; };
+		848E5B9B1ED902C1000518E0 /* JYSingleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYSingleView.m; sourceTree = "<group>"; };
 		BAB76831F6786079A8BB4EE2 /* Pods-JYSingleView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JYSingleView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JYSingleView/Pods-JYSingleView.debug.xcconfig"; sourceTree = "<group>"; };
 		C33F0B459D0C575C10139FFB /* Pods-JYSingleView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JYSingleView.release.xcconfig"; path = "Pods/Target Support Files/Pods-JYSingleView/Pods-JYSingleView.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -68,7 +68,7 @@
 		84097A271ED7F03900042B7E /* JYSingleView */ = {
 			isa = PBXGroup;
 			children = (
-				84097A3F1ED7F07800042B7E /* JYSingleView */,
+				848E5B991ED902AC000518E0 /* jySingleView */,
 				84097A2B1ED7F03900042B7E /* AppDelegate.h */,
 				84097A2C1ED7F03900042B7E /* AppDelegate.m */,
 				84097A2E1ED7F03900042B7E /* ViewController.h */,
@@ -90,13 +90,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		84097A3F1ED7F07800042B7E /* JYSingleView */ = {
+		848E5B991ED902AC000518E0 /* jySingleView */ = {
 			isa = PBXGroup;
 			children = (
-				84097A401ED7F08E00042B7E /* JYSingleView.h */,
-				84097A411ED7F08E00042B7E /* JYSingleView.m */,
+				848E5B9A1ED902C1000518E0 /* JYSingleView.h */,
+				848E5B9B1ED902C1000518E0 /* JYSingleView.m */,
 			);
-			path = JYSingleView;
+			path = jySingleView;
 			sourceTree = "<group>";
 		};
 		920F8F8274897F419FFD5F0D /* Pods */ = {
@@ -240,7 +240,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84097A301ED7F03A00042B7E /* ViewController.m in Sources */,
-				84097A421ED7F08E00042B7E /* JYSingleView.m in Sources */,
+				848E5B9C1ED902C1000518E0 /* JYSingleView.m in Sources */,
 				84097A2D1ED7F03900042B7E /* AppDelegate.m in Sources */,
 				84097A2A1ED7F03900042B7E /* main.m in Sources */,
 			);
@@ -405,6 +405,7 @@
 				84097A3E1ED7F03A00042B7E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
