@@ -71,7 +71,7 @@
 @implementation JYSingleView
 - (instancetype)initWithModel:(JYSingleModel *)model
 {
-    if (self = [super init]) {
+    if (self = [super initWithFrame:CGRectZero]) {
         self->_model = model;
         [self commInit];
     }
@@ -99,8 +99,6 @@
 
 - (void)commInit
 {
-    
-    
     [self theSubViewAdd];
     [self theInteractionEvents];
 }

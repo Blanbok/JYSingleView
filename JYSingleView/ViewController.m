@@ -7,8 +7,11 @@
 //
 
 #import "ViewController.h"
+#import "JYSingleView.h"
+#import <Masonry/Masonry.h>
 
 @interface ViewController ()
+@property (nonnull, nonatomic,strong) JYSingleView *singleView;
 
 @end
 
@@ -17,6 +20,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    JYSingleModel *model = [[JYSingleModel alloc]init];
+    model.title = @"请开始你的表演";
+    model.text = @"第一步";
+    model.textColor_title = [UIColor blackColor];
+    model.textColor_text = [UIColor redColor];
+    
+    
+    self->_singleView = [[JYSingleView alloc]initWithModel:model];
+    [self.view addSubview:self->_singleView];
+    [self->_singleView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.mas_equalTo(0);
+        make.centerY.mas_equalTo(0);
+        make.height.mas_equalTo(50);
+    }];
 }
 
 
