@@ -144,7 +144,7 @@
         self.label_title.text = self.model.title;
         [self.label_title sizeToFit];
         [self.label_title mas_updateConstraints:^(MASConstraintMaker *make) {
-            make.width.mas_equalTo(self.label_title.mas_width);
+            make.width.mas_equalTo(self.label_title.bounds.size.width);
         }];
     }];
     
@@ -153,8 +153,8 @@
         [self.label_title mas_remakeConstraints:^(MASConstraintMaker *make) {
             make.left.mas_equalTo(self.model.inset_title.left);
             make.centerY.mas_equalTo(self.model.inset_title.bottom-self.model.inset_title.top);
-            make.right.equalTo(self.label_text.mas_left).offset(-self.model.inset_title.right);
-            make.width.mas_equalTo(self.label_title.mas_width);
+            make.right.lessThanOrEqualTo(self.label_text.mas_left).offset(-self.model.inset_title.right);
+            make.width.mas_equalTo(self.label_title.bounds.size.width);
         }];
     }];
 
