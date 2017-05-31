@@ -139,12 +139,22 @@
     }];
     
 ///label title
+    [RACObserve(self.model, title)subscribeNext:^(id  _Nullable x) {
+        @strongify(self);
+        self.label_title.text = self.model.title;
+        [self.label_title sizeToFit];
+        [self.label_title mas_updateConstraints:^(MASConstraintMaker *make) {
+            make.width.mas_equalTo(self.label_title.mas_width);
+        }];
+    }];
+    
     [RACObserve(self.model, inset_title)subscribeNext:^(id  _Nullable x) {
         @strongify(self);
         [self.label_title mas_remakeConstraints:^(MASConstraintMaker *make) {
             make.left.mas_equalTo(self.model.inset_title.left);
             make.centerY.mas_equalTo(self.model.inset_title.bottom-self.model.inset_title.top);
             make.right.equalTo(self.label_text.mas_left).offset(-self.model.inset_title.right);
+            make.width.mas_equalTo(self.label_title.mas_width);
         }];
     }];
 

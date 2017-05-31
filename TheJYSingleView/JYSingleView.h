@@ -15,6 +15,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 typedef NS_ENUM(NSInteger,JYSingleLineType){
+    JYSingleLineTypeNone = 0,
     JYSingleLineTypeTop = 1,
     JYSingleLineTypeBottom = 2,
 };
