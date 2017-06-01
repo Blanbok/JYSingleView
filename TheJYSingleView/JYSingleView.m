@@ -48,11 +48,6 @@
     return self;
 }
 
-- (void)JY_clickSingleViewTap:(UITapGestureRecognizer *)tap
-{
-    
-}
-
 @end
 
 @interface JYSingleView ()
@@ -209,8 +204,6 @@
         
     }];
     
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self.model action:@selector(JY_clickSingleViewTap:)];
-    [self addGestureRecognizer:tap];
 }
 
 

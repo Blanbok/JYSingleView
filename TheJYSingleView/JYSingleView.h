@@ -20,7 +20,7 @@ typedef NS_ENUM(NSInteger,JYSingleLineType){
     JYSingleLineTypeBottom = 2,
 };
 
-@interface JYSingleView : UIView
+@interface JYSingleView : UIControl
 
 - (instancetype)initWithModel:(JYSingleModel*)model;
 
@@ -81,14 +81,6 @@ typedef NS_ENUM(NSInteger,JYSingleLineType){
 @property (nonnull,nonatomic,copy)      NSString *icon_head;
 
 @property (nonatomic,assign) UIEdgeInsets inset_iconHead;
-
-
-/**
- click singleView
-
- @param tap tap gesture
- */
-- (void)JY_clickSingleViewTap:(UITapGestureRecognizer*)tap;
 
 @end
 
