@@ -26,8 +26,11 @@
     model.text = @"第一步";
     model.textColor_title = [UIColor blackColor];
     model.textColor_text = [UIColor redColor];
-    
-    
+    model.icon_head = @"排量";
+    model.icon_next = @"排量";
+    model.inset_iconNext = UIEdgeInsetsMake(0, 0, 0, 15);
+    model.inset_iconHead = UIEdgeInsetsMake(0, 15, 0, 0);
+
     self->_singleView = [[JYSingleView alloc]initWithModel:model];
     [self.view addSubview:self->_singleView];
     [self->_singleView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -35,8 +38,13 @@
         make.centerY.mas_equalTo(0);
         make.height.mas_equalTo(50);
     }];
+    [self->_singleView addTarget:self action:@selector(log) forControlEvents:UIControlEventTouchUpInside];
 }
 
+- (void)log
+{
+    NSLog(@"---");
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
