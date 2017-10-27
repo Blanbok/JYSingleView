@@ -1,5 +1,4 @@
-# JYSingleView
-A single text structure that displays the title and content
+# iOS-Project-Collection
 
 1. ![Coding-iOS 客户端Coding官方客户端](https://github.com/Coding/Coding-iOS)
 
